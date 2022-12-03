@@ -11,7 +11,7 @@ namespace TestsUnitaires
         [Fact]
         public void TEST_Ctor()
         {
-            Client c = new Client("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
+            Client c = new Client("x", "Baptiste", "xxxx@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
             List<Ingredients> listIngre = new List<Ingredients> { (Ingredients)55, (Ingredients)13, (Ingredients)42, (Ingredients)21, (Ingredients)36 };
             Pizza p = new Pizza("Nom", "Description", "Image", listIngre, 8);
             c.ajouterPizzaCommande(p);
@@ -27,7 +27,7 @@ namespace TestsUnitaires
         [Fact]
         public void TEST_ChangerStatut()
         {
-            Client c = new Client("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
+            Client c = new Client("x", "Baptiste", "xxxx@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
             List<Ingredients> listIngre = new List<Ingredients> { (Ingredients)55, (Ingredients)13, (Ingredients)42, (Ingredients)21, (Ingredients)36 };
             Pizza p = new Pizza("Nom", "Description", "Image", listIngre, 8);
             c.ajouterPizzaCommande(p);
@@ -55,7 +55,7 @@ namespace TestsUnitaires
         [Fact]
         public void TEST_ToString()
         {
-            Client c = new Client("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
+            Client c = new Client("x", "Baptiste", "xxxx@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
             List<Ingredients> listIngre = new List<Ingredients> { (Ingredients)55, (Ingredients)13, (Ingredients)42, (Ingredients)21, (Ingredients)36 };
             Pizza p = new Pizza("Nom", "Description", "Image", listIngre, 8);
             c.ajouterPizzaCommande(p);

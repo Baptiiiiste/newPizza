@@ -8,46 +8,46 @@ namespace TestsUnitaires
     public class UT_Client
     {
         [Theory]
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // tout bon
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // tout bon
 
-        [InlineData("", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
-                    "Non-renseigné", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Prenom vide
+        [InlineData("", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
+                    "Non-renseignï¿½", "Baptiste",xxxxau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Prenom vide
 
-        [InlineData("Bonneau", "", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Non-renseigné", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Nom vide
+        [InlineData("x", "", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
+                    "x", "Non-renseignï¿½",xxxxau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Nom vide
 
-        [InlineData("Bonneau", "Baptiste", "", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Email vide
+        [InlineData("x", "Baptiste", "", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Email vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "Non-renseigné", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // telephone vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "Non-renseignï¿½", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // telephone vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "Non renseignée", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Adresse vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "Non renseignï¿½e", "Clermont-Ferrand", "63000", "password", "Bapt", "default\noImg.png")] // Adresse vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "", "63000", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Non-renseigné", "63000", "password", "Bapt", "default\noImg.png")] // Ville vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "", "63000", "password", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Non-renseignï¿½", "63000", "password", "Bapt", "default\noImg.png")] // Ville vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "", "password", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "00000", "password", "Bapt", "default\noImg.png")] // CodePostal vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "", "password", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "00000", "password", "Bapt", "default\noImg.png")] // CodePostal vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "..\\img\\default\\noPP.jpg")] // Image vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "Bapt", "..\\img\\default\\noPP.jpg")] // Image vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "", "default\noImg.png")] // Pseudo vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "password", "", "default\noImg.png")] // Pseudo vide
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "1234", "Bapt", "default\noImg.png")] // Mdp vide
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "1234", "Bapt", "default\noImg.png")] // Mdp vide
 
-        public void TEST_Ctor(string nom, string prénom, string email, string téléphone, string adresse, string ville, string codePostal, string mdp, string pseudo, string photo,
-                              string expNom, string expPrénom, string expEmail, string expTéléphone, string expAdresse, string expVille, string expCodePostal, string expMdp, string expPseudo, string expPhoto)
+        public void TEST_Ctor(string nom, string prï¿½nom, string email, string tï¿½lï¿½phone, string adresse, string ville, string codePostal, string mdp, string pseudo, string photo,
+                              string expNom, string expPrï¿½nom, string expEmail, string expTï¿½lï¿½phone, string expAdresse, string expVille, string expCodePostal, string expMdp, string expPseudo, string expPhoto)
         {
-            Client c = new Client(nom, prénom, email, téléphone, adresse, ville, codePostal, mdp, pseudo, photo);
+            Client c = new Client(nom, prï¿½nom, email, tï¿½lï¿½phone, adresse, ville, codePostal, mdp, pseudo, photo);
             Assert.Equal(expNom, c.Nom);
-            Assert.Equal(expPrénom, c.Prénom);
-            Assert.Equal(expTéléphone, c.Téléphone);
+            Assert.Equal(expPrï¿½nom, c.Prï¿½nom);
+            Assert.Equal(expTï¿½lï¿½phone, c.Tï¿½lï¿½phone);
             Assert.Equal(expAdresse, c.Adresse);
             Assert.Equal(expVille, c.Ville);
             Assert.Equal(expCodePostal, c.CodePostal);
@@ -59,46 +59,46 @@ namespace TestsUnitaires
 
 
         [Theory]
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png")]
-        public void TEST_ToString(string nom, string prénom, string email, string téléphone, string adresse, string ville, string codePostal, string pseudo, string photo)
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png")]
+        public void TEST_ToString(string nom, string prï¿½nom, string email, string tï¿½lï¿½phone, string adresse, string ville, string codePostal, string pseudo, string photo)
         {
             List<Ingredients> liste = new List<Ingredients> { (Ingredients)53, (Ingredients)0 };
-            Client c = new Client(nom, prénom, email, téléphone, adresse, ville, codePostal, pseudo, photo);
-            string expectedAfficher = $"{c.Nom} {c.Prénom} {c.Email} {c.Téléphone} {c.Adresse} {c.Ville} {c.CodePostal} {c.Pseudo} {c.Photo}";
+            Client c = new Client(nom, prï¿½nom, email, tï¿½lï¿½phone, adresse, ville, codePostal, pseudo, photo);
+            string expectedAfficher = $"{c.Nom} {c.Prï¿½nom} {c.Email} {c.Tï¿½lï¿½phone} {c.Adresse} {c.Ville} {c.CodePostal} {c.Pseudo} {c.Photo}";
             Assert.Equal(expectedAfficher, c.ToString());
         }
 
 
         [Theory]
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png", true)] // pareil
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png",
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png", true)] // pareil
 
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png",
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png",
                     "Perret", "Loris", "loris.perret@etu.uca.fr", "0712345678", "38 rue thisIsMonAdresse", "Vichy", "00000", "Lolo", "default\noImg.png", false)] // pas pareil
 
         [InlineData("Perret", "Loris", "loris.perret@etu.uca.fr", "0712345678", "38 rue thisIsMonAdresse", "Vichy", "00000", "Lolo", "default\noImg.png",
-                    "Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png", false)] // pas pareil
-        public void TEST_Equals(string nom, string prénom, string email, string téléphone, string adresse, string ville, string codePostal, string pseudo, string photo,
-                                string nom2, string prénom2, string email2, string téléphone2, string adresse2, string ville2, string codePostal2, string pseudo2, string photo2, bool expectResult)
+                    "x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000", "Bapt", "default\noImg.png", false)] // pas pareil
+        public void TEST_Equals(string nom, string prï¿½nom, string email, string tï¿½lï¿½phone, string adresse, string ville, string codePostal, string pseudo, string photo,
+                                string nom2, string prï¿½nom2, string email2, string tï¿½lï¿½phone2, string adresse2, string ville2, string codePostal2, string pseudo2, string photo2, bool expectResult)
         {
-            Client c1 = new Client(nom, prénom, email, téléphone, adresse, ville, codePostal, pseudo, photo);
-            Client c2 = new Client(nom2, prénom2, email2, téléphone2, adresse2, ville2, codePostal2, pseudo2, photo2);
+            Client c1 = new Client(nom, prï¿½nom, email, tï¿½lï¿½phone, adresse, ville, codePostal, pseudo, photo);
+            Client c2 = new Client(nom2, prï¿½nom2, email2, tï¿½lï¿½phone2, adresse2, ville2, codePostal2, pseudo2, photo2);
             bool result = c1.Equals(c2);
             Assert.Equal(expectResult, result);
 
         }
 
         [Theory]
-        [InlineData("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000")]
+        [InlineData("x", "Baptiste", "xxxx@etu.uca.fr", "0612345678", "37 rue thisIsMonAdresse", "Clermont-Ferrand", "63000")]
         [InlineData("Perret", "Loris", "loris.perret@etu.uca.fr", "0712345678", "38 rue thisIsMonAdresse", "Vichy", "63000")]
-        public void TEST_EnregistrerModif(string nom, string prénom, string email, string téléphone, string adresse, string ville, string codePostal)
+        public void TEST_EnregistrerModif(string nom, string prï¿½nom, string email, string tï¿½lï¿½phone, string adresse, string ville, string codePostal)
         {
-            Client c1 = new Client("Nom", "Prénom", "nathan.verdier@etu.uca.fr", "0676260411", "Adresse", "Ville", "63000", "Pseudo", "default\noPP.jpg");
-            c1.EnregistrerModif(nom, prénom, email, téléphone, adresse, ville, codePostal);
+            Client c1 = new Client("Nom", "Prï¿½nom", "nathan.verdier@etu.uca.fr", "0676260411", "Adresse", "Ville", "63000", "Pseudo", "default\noPP.jpg");
+            c1.EnregistrerModif(nom, prï¿½nom, email, tï¿½lï¿½phone, adresse, ville, codePostal);
             Assert.Equal(nom, c1.Nom);
-            Assert.Equal(prénom, c1.Prénom);
+            Assert.Equal(prï¿½nom, c1.Prï¿½nom);
             Assert.Equal(email, c1.Email);
-            Assert.Equal(téléphone, c1.Téléphone);
+            Assert.Equal(tï¿½lï¿½phone, c1.Tï¿½lï¿½phone);
             Assert.Equal(adresse, c1.Adresse);
             Assert.Equal(ville, c1.Ville);
             Assert.Equal(codePostal, c1.CodePostal);
@@ -108,7 +108,7 @@ namespace TestsUnitaires
         [Fact]
         public void TEST_EnvoyerListeCommande()
         {
-            Client c1 = new Client("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
+            Client c1 = new Client("x", "Baptiste", "xxxx@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
             List<Ingredients> listIngre = new List<Ingredients> { (Ingredients)55, (Ingredients)13, (Ingredients)42, (Ingredients)21, (Ingredients)36 };
             Pizza p = new Pizza("Nom", "Description", "Image", listIngre, 8);
             Pizza p2 = new Pizza("Nom2", "Description2", "Image2", listIngre, 8);
@@ -132,7 +132,7 @@ namespace TestsUnitaires
         [Fact]
         public void TEST_AjouterPizzaCommande()
         {
-            Client c1 = new Client("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
+            Client c1 = new Client("x", "Baptiste", "xxxx@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
             List<Ingredients> listIngre = new List<Ingredients> { (Ingredients)55, (Ingredients)13, (Ingredients)42, (Ingredients)21, (Ingredients)36 };
             Pizza p = new Pizza("Nom", "Description", "Image", listIngre, 8);
             c1.ajouterPizzaCommande(p);
@@ -142,7 +142,7 @@ namespace TestsUnitaires
         [Fact]
         public void TEST_SupprimerPizzaCommande()
         {
-            Client c1 = new Client("Bonneau", "Baptiste", "baptiste.bonneau@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
+            Client c1 = new Client("x", "Baptiste", "xxxx@etu.uca.fr", "0606060606", "37 rue mon adresse", "clermont", "password", "pseudo", "photo.png");
             List<Ingredients> listIngre = new List<Ingredients> { (Ingredients)55, (Ingredients)13, (Ingredients)42, (Ingredients)21, (Ingredients)36 };
             Pizza p = new Pizza("Nom", "Description", "Image", listIngre, 8);
             c1.ajouterPizzaCommande(p);
