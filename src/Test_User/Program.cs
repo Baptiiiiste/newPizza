@@ -33,7 +33,7 @@ namespace Test_User
             Console.WriteLine(admin);
             Console.WriteLine("Changement des informations du client & admin");
             C1.EnregistrerModif("aze", "ertre", "emre@non.com", "06.12.85.95.15", "42 rue oui", "Ferrand", "63100");
-            admin.EnregistrerModif("Bonneau", "Baptiste", "Baptiste@non.com", "09.25.25.73.19", "27 rue non", "Clermont-Ferrand", "63000");
+            admin.EnregistrerModif("ttttt", "Baptiste", "Baptiste@non.com", "09.25.25.73.19", "27 rue non", "Clermont-Ferrand", "63000");
             Console.WriteLine(C1);
             Console.WriteLine(admin);
 
